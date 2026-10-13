@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin | Domotics Inc</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="container">
+    <p id="loading" class="muted">Loading…</p>
+
+    <!-- Login (shown when you are not signed in) -->
+    <form id="login" class="card narrow hidden">
+      <h1>Admin login</h1>
+      <div id="login-error"></div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" type="email" autocomplete="username" required>
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input id="password" type="password" autocomplete="current-password" required>
+      </div>
+      <button class="btn btn-block" id="login-btn" type="submit">Sign in</button>
+    </form>
+
+    <!-- Dashboard (shown after you sign in) -->
+    <div id="dashboard" class="hidden">
+      <div class="admin-top">
+        <h1 style="margin:0">Admin panel</h1>
+        <button class="btn btn-outline btn-small" id="logout">Log out</button>
+      </div>
+
+      <div class="tabs">
+        <button class="tab active" id="tab-orders" type="button">Orders</button>
+        <button class="tab" id="tab-products" type="button">Products</button>
+      </div>
+
+      <div id="notice"></div>
+
+      <section id="orders-panel"></section>
+
+      <section id="products-panel" class="hidden">
+        <form class="card" id="product-form" style="margin-bottom:20px">
+          <h2>Add a product</h2>
+          <div class="field">
+            <label for="pname">Product name</label>
+            <input id="pname" maxlength="200" required>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="pprice">Price</label>
+              <input id="pprice" type="number" min="0" step="any" required>
+            </div>
+            <div class="field">
+              <label for="pcurrency">Currency</label>
+              <input id="pcurrency" value="PKR" placeholder="PKR, USD, EUR…" maxlength="8" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="pdesc">Description</label>
+            <textarea id="pdesc" maxlength="5000"></textarea>
+          </div>
+          <button class="btn" id="add-btn" type="submit">Add product</button>
+        </form>
+
+        <div class="card">
+          <h2>Your products</h2>
+          <div id="product-list"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>
