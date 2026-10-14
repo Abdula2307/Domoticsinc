@@ -3,22 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Domotics Inc</title>
-  <meta name="description" content="Domotics Inc online store. Order online and pay on delivery.">
+  <title>Domotics Inc | Smart home solutions</title>
+  <meta name="description" content="Domotics Inc: modern smart home solutions. Order online and pay on delivery.">
+  <meta name="theme-color" content="#04150f">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <div id="site-header"></div>
 
-  <main class="container">
-    <section class="hero">
-      <h1>Welcome to Domotics Inc</h1>
-      <p>Browse our products, order online and pay when your order arrives.</p>
+  <main>
+    <!-- Hero -->
+    <section class="hero-home">
+      <div class="container hero-copy">
+        <p class="eyebrow">Smarter spaces. Better living.</p>
+        <h1>Welcome to<br><span class="accent">Domotics Inc.</span></h1>
+        <p class="lead">Your destination for modern smart home solutions. Designed for comfort, built for a smarter tomorrow.</p>
+        <a href="#shop" class="btn">Explore Now <span class="icon" data-icon="arrow"></span></a>
+      </div>
     </section>
 
-    <h2>Products</h2>
-    <div id="message"></div>
-    <div id="products" class="grid"></div>
+    <!-- Feature strip (edit these four lines to match what you really offer) -->
+    <section class="strip">
+      <div class="container strip-grid">
+        <div class="strip-item"><span class="icon-ring" data-icon="truck"></span><div><strong>Free Shipping</strong><small>On all orders, always.</small></div></div>
+        <div class="strip-item"><span class="icon-ring" data-icon="shield"></span><div><strong>Secure Payments</strong><small>100% safe &amp; encrypted.</small></div></div>
+        <div class="strip-item"><span class="icon-ring" data-icon="headset"></span><div><strong>24/7 Support</strong><small>We're here to help.</small></div></div>
+        <div class="strip-item"><span class="icon-ring" data-icon="leaf"></span><div><strong>Sustainable Choices</strong><small>A smarter planet.</small></div></div>
+      </div>
+    </section>
+
+    <!-- Products (filled from your admin panel) -->
+    <section id="shop" class="section">
+      <div class="container">
+        <h2 class="section-title">Our Products</h2>
+        <p class="section-sub">Pick what you like and pay when it arrives.</p>
+        <div id="message"></div>
+        <div id="products" class="grid"></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="band band-about">
+      <div class="container band-inner">
+        <div class="band-copy">
+          <p class="eyebrow">Modern living, redefined</p>
+          <h2>Smart Homes<br><span class="accent">Start Here.</span></h2>
+          <p>At Domotics Inc., we bring innovation, comfort and style together. Our smart home solutions are designed to fit your lifestyle &mdash; making everyday living easier, safer and more efficient.</p>
+          <a href="#shop" class="btn btn-outline">Discover More <span class="icon" data-icon="arrow"></span></a>
+        </div>
+        <p class="band-tag">Smarter<br>Safer<br>Greener</p>
+      </div>
+    </section>
+
+    <!-- Solutions -->
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">Explore solutions</p>
+        <h2 class="section-title">Smart Living for <span class="accent">Every Space</span></h2>
+        <p class="section-sub">From lighting to security, comfort to convenience &mdash; create a home that works for you.</p>
+        <div class="solutions">
+          <a href="#shop" class="solution"><span class="icon" data-icon="home"></span>Smart Homes<span class="go" data-icon="arrow"></span></a>
+          <a href="#shop" class="solution"><span class="icon" data-icon="bulb"></span>Lighting &amp; Comfort<span class="go" data-icon="arrow"></span></a>
+          <a href="#shop" class="solution"><span class="icon" data-icon="shield"></span>Security &amp; Access<span class="go" data-icon="arrow"></span></a>
+          <a href="#shop" class="solution"><span class="icon" data-icon="leaf"></span>Sustainability<span class="go" data-icon="arrow"></span></a>
+          <a href="#shop" class="solution"><span class="icon" data-icon="grid"></span>Smart Living Tech<span class="go" data-icon="arrow"></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Domotics -->
+    <section id="features" class="section">
+      <div class="container why">
+        <div class="why-image" aria-hidden="true"></div>
+        <div class="why-copy">
+          <p class="eyebrow">Why Domotics Inc.</p>
+          <h2>Innovation in<br><span class="accent">Every Detail</span></h2>
+          <p>We're more than just a store &mdash; we're your partner in creating a smarter, more connected home.</p>
+        </div>
+        <ul class="why-list">
+          <li><span class="icon-ring" data-icon="star"></span><div><strong>Premium Quality</strong><small>Built to last.</small></div></li>
+          <li><span class="icon-ring" data-icon="gear"></span><div><strong>Easy Setup</strong><small>Hassle-free installation.</small></div></li>
+          <li><span class="icon-ring" data-icon="heart"></span><div><strong>Customer Focus</strong><small>Your satisfaction matters.</small></div></li>
+          <li><span class="icon-ring" data-icon="leaf"></span><div><strong>Eco Friendly</strong><small>A cleaner, greener future.</small></div></li>
+        </ul>
+      </div>
+    </section>
   </main>
 
   <div id="site-footer"></div>
@@ -26,4 +95,4 @@
   <script src="/js/common.js"></script>
   <script src="/js/index.js"></script>
 </body>
-</html>
+  </html>
