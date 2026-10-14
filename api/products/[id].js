@@ -12,7 +12,9 @@ module.exports = async (req, res) => {
     // Public: one product
     if (req.method === "GET") {
       const db = await getDb();
-      const p = await db.collection("products").findOne({ _id: new ObjectId(id) });
+      const p = await db
+        .collection("products")
+        .findOne({ _id: new ObjectId(id) }, { projection: { images: 0 } });
       if (!p) return send(res, 404, { error: "Not found" });
       return send(res, 200, {
         _id: p._id.toString(),
@@ -20,6 +22,7 @@ module.exports = async (req, res) => {
         price: p.price,
         currency: p.currency,
         description: p.description || "",
+        imageCount: p.imageCount || 0,
       });
     }
 
