@@ -65,6 +65,12 @@
             <label for="pdesc">Description</label>
             <textarea id="pdesc" maxlength="5000"></textarea>
           </div>
+          <div class="field">
+            <label for="pimages">Photos</label>
+            <input id="pimages" type="file" accept="image/*" multiple>
+            <p class="hint">Up to 4 photos. The first one is the main photo. They are resized automatically.</p>
+            <div id="image-previews" class="previews"></div>
+          </div>
           <button class="btn" id="add-btn" type="submit">Add product</button>
         </form>
 
