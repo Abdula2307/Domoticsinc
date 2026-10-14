@@ -48,7 +48,7 @@ module.exports = async (req, res) => {
       // Prices always come from the database, never from the browser
       const products = await db
         .collection("products")
-        .find({ _id: { $in: [...qtyById.keys()].map((id) => new ObjectId(id)) } })
+        .find({ _id: { $in: [...qtyById.keys()].map((id) => new ObjectId(id)) } }, { projection: { images: 0 } })
         .toArray();
 
       if (products.length !== qtyById.size) {
